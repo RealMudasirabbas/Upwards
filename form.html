@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal Details Form</title>
+    </head>
+    <body>
+        <h1>Person Details Form</h1>
+        <form action="https//:example.com" method="get">
+            <fieldset>
+                <legend>Person Details</legend>
+                <br />
+                <label for="username"
+                    >Username:<input
+                        type="text"
+                        autofocus
+                        id="username"
+                        value="abbas"
+                        required
+                /></label>
+                <br /><br />
+                <label for="email"
+                    >Email:
+                    <input type="text"
+                    id="email"
+                    autocomplete="email"
+                    value="123@gmail.com"
+                    readonly
+                /></label>
+                <br /><br />
+                <label for="password"
+                    >Password:
+                    <input type="text" id="password" value="12345678" readonly
+                /></label>
+                <br /><br />
+                <label for="fullname"
+                    >Full Name: <input type="text" id="fullname" value="abbas"
+                /></label>
+                <br /><br />
+            </fieldset>
+            <br /><br />
+            <fieldset>
+                <label for="color"
+                    >Create your favorite Color:
+                    <input type="color" name="" id="color"
+                /></label>
+                <br /><br />
+                <label for="number"
+                    >Write your number:
+                    <input type="number" id="number" min="1" max="15"
+                /></label>
+                <br /><br />
+                <label for="range"
+                    >Select some Range between 1 to 10:
+                    <input type="range" value="5" step="2" minlength="1" maxlength="10"
+                /></label>
+                <br /><br />
+                <label for="date"
+                    >Choose a Date:
+                    <input
+                        type="date"
+                        id="date"
+                        min="01-01-2000"
+                        max="01-01-2030"
+                        value="01-01-2000"
+                        pattern="25-01-2030"
+                /></label>
+            </fieldset>
+            <br /><br />
+            <fieldset>
+                <br /><br />
+                <label for="month"
+                    >Enter a Month: <input type="month" id="month" />
+                </label>
+                <br /><br />
+                <label for="week"
+                    >Enter a Week: <input type="week" id="week" />
+                </label>
+                <br /><br />
+                <label for="time"
+                    >Enter the Time: <input type="time" id="time" />
+                </label>
+                <br /><br />
+                <label for="search"
+                    >Input your query: <input type="search" id="search"
+                /></label>
+                <br /><br />
+                <label for="tel"
+                    >Enter Your Telephone Number: <input type="tel" id="tel"
+                /></label>
+                <br /><br />
+                <label for="url"
+                    >Enter some URL: <input type="url" id="url" />
+                </label>
+                <br /><br />
+            </fieldset>
+            <br /><br />
+            <fieldset>
+                <input type="submit" id="form-submit" />
+            </fieldset>
+        </form>
+    </body>
+</html>
