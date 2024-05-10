@@ -75,16 +75,9 @@
 
 let firstName = 'Mudasir';
 let lastName = 'Abbas';
-let dateOfBirth = '2005';
+let dateOfBirth = 2024 - 2005;
 let student_info = (document.getElementById('student_message').innerHTML =
-    'Hi, my name is ' +
-    firstName +
-    ' ' +
-    lastName +
-    '.' +
-    ' I am ' +
-    (2024 - dateOfBirth) +
-    ' years old and I am learning Javascript.');
+    'Hi, my name is ' + firstName +' ' + lastName +'.' +' I am ' + dateOfBirth +' years old and I am learning Javascript.');
 
 console.log(student_info);
 
@@ -181,3 +174,5 @@ console.log(
     console.log("udemyLink", udemyLink);
     googleLink = googleLink.replace("https://", "");
     console.log("googleLink", googleLink);
+
+    
