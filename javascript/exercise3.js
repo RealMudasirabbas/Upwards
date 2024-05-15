@@ -52,10 +52,10 @@ const absences = document.getElementById("absence")
 const gradeBtn = document.getElementById("grade-btn")
 const resultExe2 = document.getElementById("result-2")
 
-function percentageOfClasses(classes) {
+function percentageOfClasses() {
     const totalClasses = 20
-    const leaves = totalClasses - absences.value
-    const percentageOfPresence = (classes / leaves) * 100
+    const presence = totalClasses - absences.value
+    const percentageOfPresence = (presence / totalClasses) * 100
 
     return percentageOfPresence + "%"
 }
@@ -71,45 +71,20 @@ function calculateAverage(grade1, grade2) {
 
 // calculate Absences
 
-function calculateAbsences(classes) {
+function calculateAbsences(leaves) {
     const totalClasses = 20
-    const absences = totalClasses - classes
+    const absences = totalClasses - leaves
 
     return absences
 }
 
-// function checkGrades() {
-//     // calculate percentage
-
-//     // if (!(inputVal1 && inputVal2 < 10)) {
-//     //     const result = resultExe2.innerText = "Please give number below than 10 in each field"
-//     //     return result
-//     // }
-
-//     // if ((inputVal1 && inputVal2 < 0) || (inputVal1 && inputVal2 === "")) {
-
-//     //     let emptyArr =  [];
-//     //     console.log(emptyArr); }
-
-//     if (inputVal1 > 0 && inputVal2 > 0 && absenceOfStudent > 0 ) {
-
-//     }
-
-// }
-
-// console.log(checkGrades());
-
 gradeBtn.addEventListener("click", () => {
-    if (gradeOne.value > 10 || gradeTwo.value > 10) {
-        const result = (resultExe2.innerText =
-            " Please give grades less than in 10 in each field")
-        return result
-    } else {
+    if (gradeOne.value && gradeTwo.value) {
         const inputVal1 = gradeOne.value
         const inputVal2 = gradeTwo.value
         const absenceOfStudent = absences.value
 
-        const percentageResultOfClasses = percentageOfClasses(absenceOfStudent)
+        const percentageResultOfClasses = percentageOfClasses()
 
         const averageResultOfGrades = calculateAverage(inputVal1, inputVal2)
 
@@ -192,47 +167,37 @@ const newSalesArray = sales.filter((customer) => {
     }
 })
 
-// for (let i = 0; i < sales.length; i++) {
 
-//     if (sales[i].refundRequested !== null) {
-//         sales.splice(i,1)
-//         i--
-//     }
-// }
 
-const section1 = document.getElementById("section-1")
-const section2 = document.getElementById("section-2")
-const section3 = document.getElementById("section-3")
-const section4 = document.getElementById("section-4")
-const section5 = document.getElementById("section-5")
+let tBody = document.getElementById("mainBody");
+let tFoot = document.getElementById("tmainFoot") 
+let sum = 0;
 
-function showSales() {
-    let sum = 0
-
-    for (let i = 0; i < newSalesArray.length; i++) {
-        section1.cells[0].innerText = newSalesArray[0].student
-        section1.cells[1].innerText = newSalesArray[0].date
-        section1.cells[2].innerText = newSalesArray[0].amount
-
-        section2.cells[0].innerText = newSalesArray[1].student
-        section2.cells[1].innerText = newSalesArray[1].date
-        section2.cells[2].innerText = newSalesArray[1].amount
-
-        section3.cells[0].innerText = newSalesArray[2].student
-        section3.cells[1].innerText = newSalesArray[2].date
-        section3.cells[2].innerText = newSalesArray[2].amount
-
-        section4.cells[0].innerText = newSalesArray[3].student
-        section4.cells[1].innerText = newSalesArray[3].date
-        section4.cells[2].innerText = newSalesArray[3].amount
-
-        section5.cells[0].innerText = "Total Sales: "
-        sum += newSalesArray[i].amount
-        section5.cells[1].innerText = sum
-    }
+for (let i = 0; i < newSalesArray.length; i++) {
+    const createTableData = `<tr> 
+    
+    <td>${newSalesArray[i].student}</td>
+    <td>${newSalesArray[i].date}</td>
+    <td>${newSalesArray[i].amount}</td>
+    </tr>
+    `
+    sum+= newSalesArray[i].amount
+    tBody.innerHTML += createTableData
+    
 }
 
-showSales()
+const createNewRow = `
+    <tr>
+    <td colspan="2">Total Sales
+    </td>
+    <td> ${sum}</td>
+    </tr>
+    `
+tFoot.innerHTML += createNewRow
+
+
+
+
 
 // Fill the html table below with the sales and print the total amount of sales in the last line. Don't include the sales that had a refund requested.
 
@@ -242,13 +207,16 @@ showSales()
 
 // Nested If Else alternative
 
-let isMember = false
-let age = 25
 
-if (isMember == true || age >= 65) {
-    console.log("Free")
-} else if (age < 18) {
-    console.log("$ 6.00")
-} else {
-    console.log("$ 12.00")
-}
+
+
+// let isMember = false
+// let age = 25
+
+// if (isMember == true || age >= 65) {
+//     console.log("Free")
+// } else if (age < 18) {
+//     console.log("$ 6.00")
+// } else {
+//     console.log("$ 12.00")
+// }
