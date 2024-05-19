@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="exercise4.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Js Assignment</title>
+
+        <style>
+            .productBox {
+                width: 400px;
+                max-width: 100%;
+                height: 400px;
+                border: 1px solid grey;
+                border-radius: 4px;
+                display: flex;
+                object-fit: contain;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 30px;
+            }
+
+            .productBox .productInfo {
+                text-align: center;
+            }
+            img {
+                width: 200px;
+                height: 400px;
+                object-fit: contain;
+            }
+
+            form {
+                display: block;
+                margin-top: 0em;
+                unicode-bidi: isolate;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Question No 1</h1>
+        <p> An e-commerce website has two types of shipments:</p>
+        <ul>
+            <li>Standard: 7 days</li>
+            <li>Express: 3 days</li>
+        </ul>
+        <select id="choose_options">
+            <option value="choose the type of shipment"
+                >choose the type of shipment</option
+            >
+            <option value="Standard: 7 days">Standard: 7 days</option>
+            <option value="Express: 3 days">Express: 3 days</option>
+        </select>
+        <p id="order-date"></p>
+        <p id="delivery"></p>
+        <p id="delivery-fee"></p>
+        <br /><br />
+        <hr />
+        <hr />
+
+        <h1>Ouestion No 2</h1>
+
+        <div class="productBox">
+            <img src="" alt="" id="product_image"/>
+            <div class="productInfo">
+                <p id="phone_name"></p>
+                <h3 id="phone_price"></h3>
+            </div>
+        </div>
+        <br>
+
+        <form>
+            <input type="radio" name="product" checked/> iPhone SE 64GB Red
+            <br />
+            <input type="radio" name="product" /> iPhone 11 128GB Black
+            <br />
+            <input type="radio" name="product" /> iPhone 8 Plus 64GB Silver
+
+            <br />
+        </form>
+
+        <script src="exercise4.js"></script>
+    </body>
 </html>
